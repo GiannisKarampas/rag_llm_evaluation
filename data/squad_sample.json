@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Which city is the birthplace of the spouse of the artist who painted The Starry Night?",
+    "context_ids": ["c101", "c214"],
+    "contexts": [
+      "Vincent van Gogh painted The Starry Night. His brother Theo van Gogh was married to Johanna Bonger.",
+      "Johanna Bonger was born in Amsterdam in 1862."
+    ],
+    "answer": ["Amsterdam"]
+  },
+  {
+    "question": "Who founded the company whose headquarters are in Cupertino?",
+    "context_ids": ["c7", "c9"],
+    "contexts": [
+      "Apple Inc. is headquartered in Cupertino, California.",
+      "Steve Jobs was one of the founders of Apple Inc."
+    ],
+    "answer": ["Steve Jobs"]
+  },
+  {
+    "question": "Which university did the author of 'The Great Gatsby' attend?",
+    "context_ids": ["c12", "c23"],
+    "contexts": [
+      "F. Scott Fitzgerald wrote the novel 'The Great Gatsby', published in 1925.",
+      "F. Scott Fitzgerald attended Princeton University but did not graduate."
+    ],
+    "answer": ["Princeton University"]
+  },
+  {
+    "question": "In which country is the home stadium of the club founded by the Brazilian footballer who played for Barcelona?",
+    "context_ids": ["c34", "c45"],
+    "contexts": [
+      "Ronaldinho is a Brazilian footballer who played for Barcelona from 2003 to 2008.",
+      "Ronaldinho founded the club 'Brusque Futebol Clube' whose home stadium, Estádio Augusto Bauer, is located in Brusque, Brazil."
+    ],
+    "answer": ["Brazil"]
+  },
+  {
+    "question": "What language is spoken in the homeland of the scientist who discovered penicillin?",
+    "context_ids": ["c56", "c67"],
+    "contexts": [
+      "Alexander Fleming discovered penicillin in 1928.",
+      "Alexander Fleming was born in Lochfield, Scotland, where the primary language spoken is English."
+    ],
+    "answer": ["English"]
+  },
+  {
+    "question": "Which city hosts the museum that displays the original painting by the artist born in Zundert, Netherlands?",
+    "context_ids": ["c78", "c89"],
+    "contexts": [
+      "Vincent van Gogh was born in Zundert, Netherlands, in 1853.",
+      "The Museum of Modern Art (MoMA) in New York City displays the original 'The Starry Night' painted by Vincent van Gogh."
+    ],
+    "answer": ["New York City"]
+  },
+  {
+    "question": "What is the title of the film directed by the son of the actor who starred in 'The Godfather'?",
+    "context_ids": ["c90", "c101"],
+    "contexts": [
+      "Marlon Brando starred as Vito Corleone in 'The Godfather'.",
+      "Christian Brando, son of Marlon Brando, directed the film 'The Joneses' (2009)."
+    ],
+    "answer": ["The Joneses"]
+  },
+  {
+    "question": "Which mountain range contains the peak that is the birthplace of the Nobel Prize-winning physicist who formulated the theory of general relativity?",
+    "context_ids": ["c112", "c123"],
+    "contexts": [
+      "Albert Einstein formulated the theory of general relativity in 1915.",
+      "Albert Einstein was born in Ulm, Germany, which is near the foothills of the Swabian Alps."
+    ],
+    "answer": ["Swabian Alps"]
+  }
+]
