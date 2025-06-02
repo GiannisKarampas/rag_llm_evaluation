@@ -1,6 +1,6 @@
 # RAG-LLM Multi-Hop QA Evaluation
 
-This repository provides a complete pipeline to evaluate Retrieval-Augmented Generation (RAG) QA systems on **multi-hop, multi-context** questions. It combines local embeddings (SentenceTransformers), a vector database (ChromaDB), a local LLM (LM Studio), and [RAGAs](https://github.com/explodinggradients/ragas) for advanced context-recall metrics and claim coverage.
+This repository provides a complete pipeline to evaluate Retrieval-Augmented Generation (RAG) QA systems on **multi-hop, multi-context** questions. It combines local embeddings (SentenceTransformers), a vector database (ChromaDB), a local LLM (LM Studio)for advanced context-recall metrics and claim coverage.
 
 ---
 
@@ -11,7 +11,7 @@ This repository provides a complete pipeline to evaluate Retrieval-Augmented Gen
 ├── data/
 │└── squad_sample.json
 ├── embeddings/
-│   └── embed.py
+│   └── embedding_model.py
 ├── vector_db/
 │   └── chroma_client.py
 ├── llm_api/
