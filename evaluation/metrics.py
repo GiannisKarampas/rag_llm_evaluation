@@ -1,7 +1,4 @@
 import re
-
-from ragas import SingleTurnSample
-from ragas.metrics import LLMContextRecall
 from sentence_transformers import util
 
 #  Basic QA Metrics
@@ -98,59 +95,6 @@ def map_at_k(retrieved_ids: list[str], relevant_ids: set[str], k: int) -> float:
     if not relevant_ids:
         return 0.0
     return sum_prec / len(relevant_ids)
-
-#  RAGAs‐Based Context Recall
-
-async def llm_context_recall( question: str, generated_answer: str, ground_truth_answer: str, retrieved_contexts: list[str], evaluator_llm) -> float:
-    """
-    Asynchronous wrapper around RAGAs.LLMContextRecall.
-    - question: the original user query
-    - generated_answer: the LLM's answer (RAG output)
-    - ground_truth_answer: the canonical answer text
-    - retrieved_contexts: list of context strings retrieved by your retriever
-    - evaluator_llm: an OpenAI‐compatible client (e.g., OpenAI, LMStudio client)
-
-    Usage:
-        # Suppose you have an async event loop already:
-        score = await llm_context_recall(
-            question="Who wrote Pride and Prejudice?",
-            generated_answer="Jane Austen wrote Pride and Prejudice.",
-            ground_truth_answer="Jane Austen wrote 'Pride and Prejudice', published in 1813.",
-            retrieved_contexts=["...","..."],
-            evaluator_llm=my_openai_client
-        )
-    Returns a float in [0,1].
-    """
-    metric = LLMContextRecall(llm=evaluator_llm)
-    sample = SingleTurnSample(
-        user_input=question,
-        response=generated_answer,
-        reference=ground_truth_answer,
-        retrieved_contexts=retrieved_contexts
-    )
-
-    return await metric.single_turn_ascore(sample)
-
-def llm_context_recall_sync(
-    question: str,
-    generated_answer: str,
-    ground_truth_answer: str,
-    retrieved_contexts: list[str],
-    evaluator_llm
-) -> float:
-    """
-    Synchronous helper for LLMContextRecall using asyncio.run.
-    """
-    import asyncio
-    return asyncio.run(
-        llm_context_recall(
-            question,
-            generated_answer,
-            ground_truth_answer,
-            retrieved_contexts,
-            evaluator_llm
-        )
-    )
 
 # End-to-End Helpers
 
